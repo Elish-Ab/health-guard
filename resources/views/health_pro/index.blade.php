@@ -17,7 +17,6 @@
                     <th>#</th>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Experience</th>
                     <th> View </th>
                     <th>Delete</th>
                 </tr>
@@ -28,7 +27,6 @@
                         <th>#</th>
                         <th>Name</th>
                         <th>Email</th>
-                        <th>Experience</th>
                         <th> View </th>
                         <th>Delete</th>
                     </tr>
@@ -39,7 +37,6 @@
                     <tr>
                         <td>{{$doctor->id}}</td>
                         <td> {{$doctor->name}}</td>
-                        <td>{{ $doctor->email}}</td>
                         <td>{{ $doctor->email}}</td>
                         <td><a href="#" class='btn btn-primary'><i class="fa fa-eye" aria-hidden="true"></a></td>
                         <td>

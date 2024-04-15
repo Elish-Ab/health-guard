@@ -16,7 +16,7 @@
                 <tr>
                     <th>#</th>
                     <th>Posted By</th>
-                    <th>title</th>
+                    <th>Title</th>
                     <th>Content</th>
                     <th>Status</th>
                     <th> View </th>

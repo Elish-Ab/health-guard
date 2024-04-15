@@ -1,4 +1,4 @@
-@extends('admin.layout')
+@extends('admin.main')
 @section('title')
     Dashboard
 @endsection
@@ -9,50 +9,64 @@
             {{-- <li class="breadcrumb-item active">Dashboard</li> --}}
         </ol>
         <div class="row">
-            <div class="col-xl-3 col-md-6">
-                <div class="card bg-primary text-white mb-4">
+
+            <!-- Earnings (Monthly) Card Example -->
+           
+        
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
                     <div class="card-body">
-                        @foreach ($results as $result)
-                            @if ($result->role_name == 'health professional')
-                                Health Professionals: {{ $result->count }}
-                            @endif
-                        @endforeach
-                    </div>
-                    <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="{{url('/health')}}">View Details</a>
-                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-6">
-                <div class="card bg-warning text-white mb-4">
-                    <div class="card-body">Blogs: {{ $blogCount }}</div>
-                    <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="{{url('/blog')}}">View Details</a>
-                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    @foreach ($results as $result)
+                                            @if ($result->role_name == 'health professional')
+                                                Health Professionals
+                                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $result->count }}</div>
+                                            @endif
+                                     @endforeach </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                                <a href="{{url('/health')}}" class="text-primary">view details</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-md-6">
-                <div class="card bg-success text-white mb-4">
+        
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-info shadow h-100 py-2">
                     <div class="card-body">
-                        Students: {{ $studentCount }}
-                    </div>
-                    <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="{{url('/stu')}}">View Details</a>
-                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Students
+                                </div>
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col-auto">
+                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{ $studentCount }}</div>
+                                        <a href="{{url('/stu')}}" class="text-info">view details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            {{-- <div class="col-xl-3 col-md-6">
-                <div class="card bg-danger text-white mb-4">
-                    <div class="card-body">Blogs</div>
-                    <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="{{url('/blog')}}">View Details</a>
-                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                   Blogs</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{$blogCount}}</div>
+                                <a href="{{url('/blog')}}" class="text-success">view details</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div> --}}
+            </div>
         </div>
         <div class="row">
             <div class="col-xl-6">

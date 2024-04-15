@@ -59,6 +59,10 @@ class AdminController extends Controller
         return view('admin.dashboard', ['data' => $data, 'months'=>$months, 'monthCount'=> $monthCount, 'results'=> $results, 'studentCount' => $studentCount, 'blogCount'=>$blogCount,'Smonths'=>$Smonths, 'SmonthCount'=> $SmonthCount]);
     }
 
+
+    public function main(){
+        return view('admin.main');
+    }
      public function login()
     {
         return view('admin.login');
