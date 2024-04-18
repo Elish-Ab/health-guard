@@ -36,7 +36,7 @@
 
         <div class="flex items-center">
           <i class="fa-regular fa-bell fa-shake text-3xl"></i>
-          <p class=" font-bold px-5 ">Finish up your account by creating necessary student account informations.</p>
+          <p class=" font-bold px-5 ">Finish up your account by creating necessary healthProfessional account informations.</p>
         </div>
     
         <a href="{{ route('professionals.create') }}" class="px-3 py-2 bg-custom-blue text-white font-bold rounded-md" >
@@ -51,13 +51,11 @@
         </div>
         <div class="flex flex-col py-20 px-28">
             <p class="font-semibold">Do you know blogging is a feature allowed for only health professionals?</p>
-            <a href="{{route('blogs.create')}}">
-                <button class="bg-black text-white w-40 p-3 text-sm rounded-full mt-5"><span>Blog</span> &gt;</button>
-            </a>
+
         </div>
     </section>
 
-    
+
 
     <script src="{{asset('script/navBar.js')}}"></script>
 </section>

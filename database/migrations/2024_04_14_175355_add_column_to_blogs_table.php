@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('health_professional_profiles', function (Blueprint $table) {
+        Schema::table('blogs', function (Blueprint $table) {
             //
-            $table->integer('age')->default(0)->change();
+            $table->string('image')->nullable()->change();
+            $table->unsignedInteger('like_count')->nullable()->default(0)->change();
         });
     }
 
@@ -22,7 +23,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('health_professional_profiles', function (Blueprint $table) {
+        Schema::table('blogs', function (Blueprint $table) {
             //
         });
     }

@@ -11,8 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('blogs', function (Blueprint $table) {
-            $table->string('status')->default('Pending');
+        Schema::table('drug_use_trackers', function (Blueprint $table) {
+            //
+            $table->double('score');
         });
     }
 
@@ -21,7 +22,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('blogs', function (Blueprint $table) {
+        Schema::table('drug_use_trackers', function (Blueprint $table) {
             //
         });
     }

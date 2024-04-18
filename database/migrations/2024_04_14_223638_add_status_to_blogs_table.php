@@ -11,9 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('health_professional_profiles', function (Blueprint $table) {
-            //
-                        $table->longText('description');
+        Schema::table('blogs', function (Blueprint $table) {
+            $table->string('status')->default('draft');
         });
     }
 
@@ -22,7 +21,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('health_professional_profiles', function (Blueprint $table) {
+        Schema::table('blogs', function (Blueprint $table) {
             //
         });
     }

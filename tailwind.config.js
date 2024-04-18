@@ -27,14 +27,17 @@ export default {
             },
             width:{
                 'custom-4': '450px',
-                
+                'custom-8': '765px',
+                'custom-10': '450px',
             },
             height:{
                 'custom-7': '460px',
+                'custom-9': '316px',
             },
             spacing : {
                 'custom-5': '310px',
                 'custom-6': '114px',
+                'custom-7': '145px',
             }
 
 
